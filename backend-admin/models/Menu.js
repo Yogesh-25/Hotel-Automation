@@ -12,7 +12,6 @@
 //         contentType: String
 //     }
 // });
-
 // const Menu = mongoose.model('Menu', menuSchema);
 
 // module.exports = Menu;
