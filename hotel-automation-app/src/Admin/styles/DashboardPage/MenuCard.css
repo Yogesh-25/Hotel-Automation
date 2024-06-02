@@ -1,0 +1,56 @@
+/* MenuCard.css */
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: calc(20% - 20px);
+    /* Assuming you want 5 cards in a row */
+}
+
+.card:hover {
+    background-color: #eee;
+}
+
+.menu-item-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.card-content {
+    margin-top: 10px;
+}
+
+.rating-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.high-rating {
+    background-color: #4caf50;
+}
+
+.medium-rating {
+    background-color: #ffeb3b;
+    color: #000;
+}
+
+.low-rating {
+    background-color: #f44336;
+}

@@ -1,0 +1,129 @@
+.add-menu-container {
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.add-menu-form-container {
+    margin-top: -1rem;
+    max-width: 40%;
+    height: 82vh;
+    margin: 0 auto;
+    background-color: rgb(227, 233, 233);
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}  
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.add-menu-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input,
+.form-textarea,
+.form-file-input,
+#my-dropdown1 {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-textarea {
+    height: 120px;
+}
+
+.form-file-input {
+    padding: 0;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .add-menu-form-container {
+        max-width: 60%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-file-input {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .add-menu-form-container {
+        max-width: 80%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-file-input {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-menu-form-container {
+        max-width: 140%;
+        padding: 0.5rem;
+        height: 70vh;
+        padding: 10px;
+        margin-left: -4.5rem;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-file-input {
+        font-size: 12px;
+    }
+
+    .submit-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

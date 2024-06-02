@@ -1,0 +1,80 @@
+.sidebar1 {
+    margin-top: 3.2rem;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgb(218, 218, 215);
+    color: rgb(13, 14, 14);
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+    border-radius: 1rem;
+}
+
+.content {
+    padding: 0 3rem;
+    width: 190px;
+    padding: 20px;
+}
+
+.dashboard-but {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 5px;
+}
+
+.dashboard-but:hover {
+    color: burlywood;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 0 1.5rem;
+        width: 140px;
+        padding: 10px;
+    }
+
+    .dashboard-but h3 {
+        font-size: 0.9rem;
+    }
+
+    .dashboard-but {
+        margin-top: 0.5rem;
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 150px;
+        padding: 5px;
+        height: 100vh;
+    }
+
+    .content {
+        padding: 0 1rem;
+        width: 120px;
+        padding: 15px;
+        margin-left: 0.5rem;
+    }
+
+    .dashboard-but h3 {
+        font-size: 1rem;
+    }
+
+    .dashboard-but {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}

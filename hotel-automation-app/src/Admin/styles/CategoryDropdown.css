@@ -1,0 +1,83 @@
+/* CategoryDropdown.css */
+
+.dropdown-container {
+    margin: 20px;
+}
+
+.dropdown-label {
+    margin-right: 10px;
+    font-weight: bold;
+
+}
+
+.dropdown-select {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%;
+    height: 2rem;
+}
+
+.add-new {
+    background-color: rgb(67, 232, 12);
+    color: brown;
+}
+
+.add-new:hover {
+    background-color: rgb(172, 207, 160);
+    color: rgb(165, 110, 110);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .dropdown-container {
+        margin: 15px;
+    }
+
+    .dropdown-label {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+
+    .dropdown-select {
+        padding: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown-container {
+        margin: 10px;
+    }
+
+    .dropdown-label {
+        font-size: 12px;
+        margin-right: 6px;
+    }
+
+    .dropdown-select {
+        padding: 3px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-container {
+        margin: 5px;
+    }
+
+    .dropdown-label {
+        font-size: 10px;
+        margin-right: 4px;
+    }
+
+    .dropdown-select,
+    #my-dropdown1 {
+        padding: 0.14rem;
+        height: 1rem;
+        font-size: 0.65rem;
+    }
+
+    /* #my-dropdown1{} */
+
+}

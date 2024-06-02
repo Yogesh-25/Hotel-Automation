@@ -1,0 +1,13 @@
+[
+    {
+        "id":1,
+        "table-no":1,
+        "pname":"khaju-kari",
+        "description":"lorem ispsum",
+        "price":219,
+        "image-link":"",
+        "taste":"spicy,medium spicy"
+    }
+]
+// create first Dashboard<login-admin, adding product,removing product>
+// create a ui for user to take order<add to cart with total amount with gst> payment gateway.

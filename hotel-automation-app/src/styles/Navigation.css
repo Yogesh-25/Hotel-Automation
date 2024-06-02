@@ -1,0 +1,496 @@
+/* Navigation.css */
+.navigation .menu-links .active-link {
+    color: #ec2e64;
+    /* Change to your desired color */
+    /* font-weight: bold; */
+}
+
+.navigation {
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9e7e7;
+    padding: 10px;
+}
+
+.left-section h1 {
+    margin: 0;
+    margin-left: 6rem;
+    font-size: 1.5rem;
+}
+
+.right-section ul {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 7rem;
+    padding: 0;
+    display: flex;
+}
+
+.right-section li {
+    margin-left: 3rem;
+}
+
+.right-section li:first-child {
+    margin-left: 1rem;
+}
+
+.right-section a {
+    color: #070707;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.right-section a:hover {
+    color: #ffcc00;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation li:last-child {
+    margin-right: 0;
+}
+
+.navigation a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+
+.navigation h1:hover {
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #ffcc00;
+}
+
+.navigation ul li,
+li button,
+li span {
+    position: relative;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.navigation ul li button {
+    border: 0px;
+    font-size: 1.2rem;
+    padding-top: 3px;
+    background: transparent;
+}
+
+.user-name {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    padding-top: 3px;
+}
+
+.user-name {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-links {
+    position: relative;
+    /* Ensure user info dropdown is positioned relative to the menu */
+}
+
+.user-info-dropdown {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #5b4747;
+    border-radius: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 40px;
+    right: 0px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+
+.user-info-item {
+    /* display: grid; */
+    /* justify-content: space-between; */
+    align-items: center;
+    /* margin-right: 1rem; */
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.user-info-item p {
+    margin-right: 10px;
+    /* Add space between p and span */
+}
+
+.user-info-item:hover {
+    /* background-color: #f0f0f0; */
+    text-decoration: none;
+}
+
+/* .navigation ul li span:hover {
+    color: #ffcc00;
+} */
+
+.navigation ul li button:hover {
+    color: rgb(236, 7, 7);
+}
+
+.navigation ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(245, 6, 6);
+    transition: width 0.3s ease;
+}
+
+.navigation ul li:hover::before {
+    width: 100%;
+}
+
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.close-button {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.close-button span {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.menu-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-links.open {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    padding: 50px 10px 10px;
+    z-index: 999;
+}
+
+.menu-links.open li {
+    margin: 10px 0;
+}
+
+.menu-links.open a {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-links.open a:hover {
+    color: #ffcc00;
+
+}
+
+
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* Black w/ opacity */
+}
+
+.modal.open {
+    display: block;
+    /* Show the modal */
+}
+
+.modal-content-login-review {
+    background-color: #fefefe;
+    margin: 6% auto;
+    margin-right: 16.5rem;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.main-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-button {
+    margin-left: 1rem;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* .user-info-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.user-info-item div {
+    margin-bottom: 5px;
+} */
+
+
+.main-page-review-item {
+    margin-left: -2rem;
+}
+
+.review-rating,
+.main-page-review-feedback {
+    margin-bottom: 10px;
+}
+
+.review-product-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+}
+
+.main-page-item-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.main-page-item-title p {
+    font-size: 0.9rem;
+}
+
+/* Modal Content */
+.modal-content-login-review {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Card Item */
+.card-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Main Page Item Title */
+.main-page-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/* Main Page Review Feedback */
+.main-page-review-feedback {
+    margin-top: 5px;
+}
+
+.but-my-review {
+    cursor: pointer;
+    background-color: #000000;
+    color: #f38240;
+    margin-top: 0.5rem;
+}
+
+.user-info-drop {}
+
+.but-my-review:hover {
+    color: #c47a4f;
+
+}
+
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #28a745;
+    /* Green background */
+    color: #fff;
+    /* White text */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 0.1em 0.5em;
+    /* Adjusted padding for reduced height */
+    font-size: 0.7em;
+    /* Smaller text */
+    margin-left: auto;
+    /* Push the badge to the right */
+    width: 40px;
+    height: 25px;
+    /* Adjusted minimum width */
+    justify-content: center;
+}
+
+.high-rating {
+    background-color: #28a745;
+    /* Green for high ratings */
+    color: #fff;
+    /* White text */
+}
+
+.medium-rating {
+    background-color: #ffc107;
+    /* Yellow for medium ratings */
+    color: #000;
+    /* Black text */
+}
+
+.low-rating {
+    background-color: #dc3545;
+    /* Red for low ratings */
+    color: #fff;
+    /* White text */
+}
+
+.rating-badge .star {
+    margin-left: 2px;
+    /* Space between the rating number and the star */
+    color: #fff;
+    /* White star */
+    font-size: 1em;
+    /* Keep the star size consistent */
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .left-section h1 {
+        font-size: 1.2rem;
+        margin-left: 0rem;
+    }
+
+    .right-section ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right-section ul.open {
+        display: flex;
+    }
+
+    .right-section li {
+        margin: 10px 0;
+        margin-top: 2rem;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .right-section li:hover {
+        color: #f38240;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .close-button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+/* Navigation.css */

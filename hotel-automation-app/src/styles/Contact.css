@@ -1,0 +1,172 @@
+.contact-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.layout-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.layout {
+    display: flex;
+    width: 100%;
+}
+
+.layout-row {
+    display: flex;
+    width: 100%;
+}
+
+.layout-cell {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-form-cell {
+    background-color: #f9f9f9;
+}
+
+.container-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.input-field,
+.input-fie {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #fff;
+}
+
+.agree-checkbox {
+    margin-right: 10px;
+}
+
+.submit-button {
+    background-color: #3c3c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+.form-send-message {
+    margin-top: 10px;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+.info-title {
+    font-size: 16px;
+    color: #3c3c3c;
+    margin-bottom: 10px;
+}
+
+.info-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Small devices (minimum width: 476px) */
+@media (max-width: 476px) {
+    .layout {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .layout-row {
+        flex-direction: column;
+    }
+
+    .layout-cell {
+        flex: 1 1 100%;
+    }
+
+    .map iframe {
+        height: 450px;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
+/* Medium devices (minimum width: 768px) */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: row;
+    }
+
+    .layout-row {
+        flex-direction: column;
+    }
+
+    .layout-cell {
+        padding: 20px;
+    }
+
+    .map {
+        height: 450px;
+    }
+}
+
+/* Large devices (minimum width: 1024px) */
+@media (min-width: 1024px) {
+
+    .contact-form-cell,
+    .contact-info-cell,
+    .map-cell {
+        flex: 1;
+    }
+
+    .container-layout {
+        align-items: flex-start;
+    }
+
+    .contact-form {
+        max-width: 600px;
+    }
+}

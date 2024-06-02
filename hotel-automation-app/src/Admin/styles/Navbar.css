@@ -1,0 +1,110 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f4f4;
+    color: #030202;
+    /* padding: 10px 20px; */
+}
+
+.navbar-left {
+    /* font-size: 24px; */
+    font-weight: bold;
+}
+
+.website-name {
+    margin: 0;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+
+/* .signin-button,
+.signout-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+} */
+
+/* .signin-button:hover,
+.signout-button:hover {
+    background-color: #7098e9;
+} */
+
+
+/* Navbar.css */
+
+
+
+.signout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+
+.signout-button:hover {
+    background-color: #0056b3;
+}
+
+.signin-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.signin-button .fas {
+    color: rgb(241, 141, 141);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    /* padding: 10px; */
+    transition: background-color 0.3s;
+}
+
+.signin-button .fas:hover {
+    background-color: rgb(193, 228, 129);
+    color: aqua;
+}
+
+
+
+
+.navbar-center {
+    flex: 4;
+    margin-top: 0.2rem;
+    /* Take up remaining space */
+    text-align: center;
+
+}

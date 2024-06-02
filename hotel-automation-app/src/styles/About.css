@@ -1,0 +1,209 @@
+.about-us-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #e2e2e2;
+    height: 89.5vh;
+}
+
+.about-us-container {
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-flex {
+    display: flex;
+}
+
+.about-us-text {
+    flex: 1;
+    padding: 20px;
+    margin-top: -3rem;
+}
+
+.about-us-text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-us-text h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.about-us-text p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.about-us-all {
+    margin-left: 1rem;
+
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    color: #2389dc;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: 0.65rem;
+    margin-top: 1rem;
+}
+
+.social-icon:hover {
+    color: #000;
+}
+
+.about-us-image {
+    text-align: center;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ButtonStyles.css */
+.read-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #000000;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.read-more-button:hover {
+    background-color: #393a3a;
+    color: aqua;
+}
+
+/* Brand colors */
+.social-icon.facebook {
+    color: #3b5998;
+    /* Facebook blue */
+}
+
+.social-icon.linkedin {
+    color: #0077b5;
+    /* LinkedIn blue */
+}
+
+.social-icon.instagram {
+    color: #e4405f;
+    /* Instagram pink */
+}
+
+/* Hover effects */
+.social-icon.facebook:hover {
+    color: #2d4373;
+    /* Darker Facebook blue */
+}
+
+.social-icon.linkedin:hover {
+    color: #005582;
+    /* Darker LinkedIn blue */
+}
+
+.social-icon.instagram:hover {
+    color: #f316ad;
+    /* Darker Instagram pink */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (minimum width: 476px) */
+@media (max-width: 476px) {
+
+    .about-us-section {
+        height: auto;
+    }
+
+    .about-us-container,
+    .about-flex {
+        flex-direction: column;
+    }
+
+    .about-flex {
+        margin-top: 1rem;
+    }
+
+    .about-us-text {
+        padding: 20px;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+
+    .about-us-image {
+        margin-top: 20px;
+    }
+}
+
+/* Medium devices (minimum width: 768px) */
+@media (max-width: 768px) {
+
+    .about-us-container,
+    .about-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-text {
+        text-align: left;
+    }
+
+    .about-us-image {
+        margin-top: 0;
+    }
+}
+
+/* Large devices (minimum width: 1024px) */
+@media (min-width: 1024px) {
+    .about-us-container {
+        flex-direction: column;
+    }
+
+    .about-us-text {
+        flex: 1;
+    }
+
+    .about-us-image {
+        /* flex: 1; */
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-us-container {
+        flex-direction: column;
+    }
+
+    .about-us-text {
+        flex: 1;
+    }
+
+    .about-us-image {
+        /* flex: 1; */
+        text-align: center;
+    }
+}
