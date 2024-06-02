@@ -1,0 +1,100 @@
+/* MenuCard.css */
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: -1.5rem;
+    margin-left: -0.75rem;
+}
+
+.card {
+    flex: 1;
+    margin: 10px;
+    margin-left: -0.1rem;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: calc(20% - 20px);
+    height: 15rem;
+    /* Assuming yu want 5 cards in a row */
+}
+
+.card:hover {
+    /* background-color: #eee; */
+}
+
+.menu-item-image {
+    max-width: 100%;
+    /* height: auto; */
+    border-radius: 4px;
+}
+
+.card-content {
+    margin-top: 10px;
+}
+
+.card-content1 {
+    margin-left: 1rem;
+}
+
+.card-cont-more-menu {
+    height: 20px;
+    margin-left: 1.5rem;
+}
+
+/* Custom style for the link card */
+.link-card {
+    text-decoration: none;
+    background-color: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    height: 1rem;
+    width: 2rem;
+    /* color: inherit; */
+    margin-top: 9rem;
+    /* text-align: center; */
+}
+
+.link-card .card-content h3 {
+    margin: 0;
+    /* text-align: center; */
+    width: 2rem;
+}
+
+/* Custom style for the link card */
+.link-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-card .card-content h3 {
+    margin: 0;
+}
+
+/* Additional styles for button-like appearance */
+.button-card {
+    width: -20px;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(9, 157, 236);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-card:hover {
+    color: rgb(0, 166, 255);
+}
+
+.button-card h3 {
+    margin: 0;
+    font-size: 1em;
+}
