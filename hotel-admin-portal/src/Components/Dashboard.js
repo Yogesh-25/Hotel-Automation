@@ -11,9 +11,7 @@ function Dashboard() {
     const [totalUserCount, setTotalUserCount] = useState(0);
     const [menuItems, setMenuItems] = useState();
     const [totalReviewCount, setTotalReviewCount] = useState(0);
-
     const [orders, setOrders] = useState([]);
-
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/users/newcount')
@@ -88,7 +86,6 @@ function Dashboard() {
                 </div>
             </div>
             <div className="recent-tab">
-                {/* Render RecentTable component here */}
                 {/* <RecentTable orders={orders} /> */}
                 <h3>Menu</h3>
                 <MenuCard />

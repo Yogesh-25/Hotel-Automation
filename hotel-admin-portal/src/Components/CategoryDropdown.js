@@ -167,8 +167,6 @@ const CategoryDropdown = ({ selectedValue, handleChangeCategory }) => {
         { value: 'Breads', label: 'Breads' },
         { value: 'Rice & Biryani', label: 'Rice & Biryani' },
        
-
-
     ]);
 
     const handleChange = (e) => {

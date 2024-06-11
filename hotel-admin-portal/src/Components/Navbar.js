@@ -1,28 +1,3 @@
-// // Navbar.js
-
-// import React from 'react';
-// import '../styles/Navbar.css';
-
-// function Navbar() {
-//     return (
-//         <nav className="navbar">
-
-//             <div className="navbar-left">
-//                 <h1 className="website-name">Hotel Name</h1>
-//             </div>
-//             {/* <div className="navbar-center">
-//                 <input type="text" placeholder="Search" className="search-bar" />
-//             </div> */}
-//             <div className="navbar-right">
-//                 <input type="text" placeholder="Search" className="search-bar" />
-//                 <button className="signin-button"><i className="fas fa-user-circle"></i></button>
-//                 <button className="signout-button">Sign Out</button>
-//             </div>
-//         </nav>
-//     );
-// }
-
-// export default Navbar;
 import React from 'react';
 import '../styles/Navbar.css';
 

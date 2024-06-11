@@ -2,13 +2,9 @@ import React, { useEffect, useState } from 'react';
 import '../../styles/DashboardPage/MenuCard.css'; // Assuming you have a CSS file for styling
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Sidebar from '../Sidebar';
 
 const MenuCard = () => {
     const [menuItems, setMenuItems] = useState([]);
-
-    // Hardcoded admin status
-    const isAdmin = true; // Change this to `false` to simulate a non-admin user
 
     useEffect(() => {
         const fetchMenuItems = async () => {
@@ -44,7 +40,6 @@ const MenuCard = () => {
         return btoa(binary);
     };
 
-   
     return (
         <>
             {/* <Sidebar /> */}
@@ -67,9 +62,7 @@ const MenuCard = () => {
                         </div>
                     ) : (
                         <Link to="/menu" key={index} className="card-content1 link-card button-card">
-                            {/* <div className="card-content1"> */}
                             <h3>more&raquo;&raquo;</h3>
-                            {/* </div> */}
                         </Link>
                     )
                 ))}

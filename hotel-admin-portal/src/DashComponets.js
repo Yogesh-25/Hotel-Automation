@@ -5,17 +5,14 @@ import Dashboard from './Components/Dashboard';
 import AddProduct from './pages/AddProduct';
 import Review from './pages/Review';
 import UserProfile from './pages/Allow';
-import ManagePeople from './pages/ManagePeople';
 import Menu from './pages/Menu';
 import './App.css';
 
 function DashComponets() {
   return (
     <>
-      {/* <Navbar /> */}
       <div className="dashboard-container">
         <Sidebar />
-        {/* <Dashboard /> */}
         <div className="content-routes">
 
           <Routes>

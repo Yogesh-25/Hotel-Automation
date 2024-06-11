@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../styles/Reviews.css'; // Import CSS file for Reviews component
+import '../styles/Reviews.css';
 
 function Review() {
   const [reviews, setReviews] = useState([]);
@@ -32,7 +32,8 @@ function Review() {
     fetchReviews();
   }, []);
 
-  const handleRemoveReview = async (id) => {
+  const handleRemoveReview = async (id,e) => {
+    e.preventDefault();
     try {
       await axios.delete(`http://localhost:5000/api/reviews/${id}`);
       setReviews(prevReviews => prevReviews.filter(review => review._id !== id));
@@ -51,7 +52,7 @@ function Review() {
   };
   // Function to determine the rating color
   const getRatingColor = (rating) => {
-    if (rating >= 4.5) return 'high-rating';
+    if (rating >= 4) return 'high-rating';
     if (rating >= 3) return 'medium-rating';
     return 'low-rating';
   };
@@ -96,11 +97,11 @@ function Review() {
                 {review.rating.toFixed(1)} <span className="star">★</span>
               </span>
             </p>
-            <p>UserName: {review.username}</p>
+            <span><span style={{ color: "gray", fontSize: "1.25rem" }}>UserName:</span> {review.username}</span>
             {/* <p className="review-rating">Rating: {review.rating}</p> */}
-            <p className="review-feedback">Feedback: {review.feedback}</p>
+            <p className="review-feedback"><span style={{ color: "gray", fontSize: "1.25rem" }}>Feedback:</span> {review.feedback}</p>
             <button className="remove-review-button" onClick={() => handleRemoveReview(review._id)}>Remove</button>
-            {/* <hr className="review-divider" /> */}
+
           </div>
         ))}
       </div>

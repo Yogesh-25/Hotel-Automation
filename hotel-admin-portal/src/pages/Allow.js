@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useUser } from './UserContext';
 import axios from 'axios';
-import '../styles/Allow.css'; // Import the CSS file
+import '../styles/Allow.css';
 
 const Allow = () => {
   const { updateUser } = useUser();
@@ -29,8 +29,6 @@ const Allow = () => {
       try {
         const response = await axios.get('http://localhost:5000/api/reviews');
         const reviewsData = response.data;
-
-        // Fetch corresponding product details for each review
         const productPromises = reviewsData.map(review =>
           axios.get(`http://localhost:5000/api/menu/${review.menuItemId}`)
         );
@@ -57,7 +55,6 @@ const Allow = () => {
       await axios.delete(`http://localhost:5000/api/users/${userId}`);
       const updatedUsers = userD.filter(user => user._id !== userId);
       setUserD(updatedUsers);
-      // You might want to update context or perform other actions after deletion
     } catch (error) {
       console.error(error);
     }
@@ -97,9 +94,9 @@ const Allow = () => {
   };
 
   const formatDate = (dateTimeString) => {
-    if (!dateTimeString) return ""; // Handle cases where the dateTimeString is null or undefined
+    if (!dateTimeString) return "";
     const dateObj = new Date(dateTimeString);
-    if (isNaN(dateObj.getTime())) return ""; // Handle cases where dateTimeString is not a valid date-time string
+    if (isNaN(dateObj.getTime())) return ""; 
     const formattedDate = dateObj.toISOString().slice(0, 19).replace('T', ' ');
     return formattedDate;
   };
@@ -124,7 +121,6 @@ const Allow = () => {
           </div>
         ))}
       </div>
-
       {selectedUser && (
         <div className="review-modal">
           <div className="review-modal-content">
@@ -132,7 +128,6 @@ const Allow = () => {
               <h3>Reviews for {selectedUser.username}</h3>
               <button className="close-btn" onClick={closeReviews}>X</button>
             </div>
-
             {userReviews.length > 0 ? (
               <ul>
                 {reviews.map(review => (
@@ -162,7 +157,6 @@ const Allow = () => {
               <p>No reviews found for this user.</p>
             )}
           </div>
-
         </div>
       )}
     </>

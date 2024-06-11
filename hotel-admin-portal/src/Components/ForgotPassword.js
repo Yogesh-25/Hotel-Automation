@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 // import '../styles/ForgotPassword.css';
 
 function ForgotPassword() {
@@ -13,8 +14,7 @@ function ForgotPassword() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:5000/api/send-otp', {
-                method: 'POST',
+            const response = await axios.post('http://localhost:5000/api/send-otp', {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -39,8 +39,7 @@ function ForgotPassword() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:5000/api/verify-otp', {
-                method: 'POST',
+            const response = await axios.post('http://localhost:5000/api/verify-otp', {
                 headers: {
                     'Content-Type': 'application/json',
                 },

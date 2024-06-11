@@ -32,11 +32,42 @@
     color: burlywood;
 }
 
+/* For tablets and larger devices */
+@media only screen and (max-width: 992px) {
+    .sidebar1 {
+        width: 150px;
+        height: 100vh;
+    }
+
+    .content {
+        width: 140px;
+    }
+}
+
+/* For smaller devices like mobile phones */
+@media only screen and (max-width: 576px) {
+    .sidebar1 {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .dashboard-but {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .sidebar {
+    .sidebar1 {
         width: 150px;
         padding: 10px;
+        height: 100vh;
     }
 
     .content {
@@ -56,7 +87,7 @@
 }
 
 @media (max-width: 480px) {
-    .sidebar {
+    .sidebar1 {
         width: 150px;
         padding: 5px;
         height: 100vh;

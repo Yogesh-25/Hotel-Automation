@@ -1,124 +1,114 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaUser, FaLock } from 'react-icons/fa';
-
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 import '../styles/Login.css';
-// import backgroundImage from '../Images/login5.jpg';/
 
 function Login({ login }) {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    const [otp, setOtp] = useState('');
+    const [showOtpInput, setShowOtpInput] = useState(false);
     const navigate = useNavigate();
+    const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
+    const [dotCount, setDotCount] = useState(0);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you should add real authentication logic
-        if (username === 'admin' && password === 'admin') {
-            login(username); // Pass username to login function
-            navigate('/dash');
+    useEffect(() => {
+        let interval;
+        if (message.startsWith('Otp sending')) {
+            interval = setInterval(() => {
+                setDotCount(prevDotCount => (prevDotCount + 1) % 6);
+            }, 400);
         } else {
-            alert('Invalid credentials');
+            clearInterval(interval);
         }
-    };
+        return () => clearInterval(interval);
+    }, [message]);
 
-    return (
-        <>
-            {/* <img src={backgroundImage} alt="Background" className="background-image-login" /> */}
-            <div className='login-container1'>
-                <div className="login-container">
+    useEffect(() => {
+        if (message.startsWith('Otp sending')) {
+            const dots = '.'.repeat(dotCount);
+            setMessage(`Otp sending${dots}`);
+        }
+    }, [dotCount]);
 
-                    <h2>Admin Login</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className='input-group'>
-                            <FaUser className="icon" />
-
-                            <input
-                                type="text"
-                                value={username}
-                                placeholder='username'
-                                onChange={(e) => setUsername(e.target.value)}
-                            />
-                        </div>
-                        <div className='input-group'>
-                            {/* <label>Password :  </label> */}
-                            <FaLock className="icon" />
-                            <input
-                                type="password"
-                                placeholder='password'
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </div>
-                        <button type="submit">Login</button>
-                    </form>
-                </div></div></>
-    );
-}
-
-export default Login;
-
-/*
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/Login.css';
-
-function Login({ login }) {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
+    const handleSubmit = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/authenticate', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }),
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                login(username); // Pass username to login function
-                navigate('/dash');
+            setError("");
+            setMessage("Otp sending.");
+            const response = await axios.post('http://localhost:5000/api/admin/login', { email });
+            if (response.data.success) {
+                setShowOtpInput(true);
+                setError("");
+                setMessage("Otp sent successfully✅");
             } else {
-                alert(data.message || 'Invalid credentials');
+                setMessage("");
+                setError(response.data.message`⚠️` || 'Invalid email⚠️');
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('Error logging in');
+            setMessage("");
+            setError('Error logging in❗');
+        }
+    };
+
+    const handleVerifyOTP = async () => {
+        try {
+            setMessage("Otp sending.");
+            const response = await axios.post('http://localhost:5000/api/admin/verify-otp', { email, otp });
+            if (response.data.success) {
+                login(email);
+                navigate('/dash');
+            } else {
+                setError("");
+                setMessage("");
+                setError(response.data.message`⚠️` || 'Invalid OTP❗');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setMessage("");
+            setError('Error verifying OTP❗');
         }
     };
 
     return (
-        <div className="login-container">
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Username: </label>
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label>Password: </label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <button type="submit">Login</button>
-            </form>
-            <button onClick={() => navigate('/forgot-password')}>Forgot Password</button>
+        <div className='login-container1'>
+            <div className="login-container">
+                <h2>Login</h2>
+                {!showOtpInput ? (
+                    <form onSubmit={handleSubmit}>
+                        <div className='input-group'>
+                            <FaUser className="icon" />
+                            <input
+                                type="email"
+                                value={email}
+                                placeholder='Email'
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
+                        <button type="submit">Send OTP</button>
+                        {message && <p className="message">{message}</p>}
+                        {error && <p className="error">{error}</p>}
+                    </form>
+                ) : (
+                    <form onSubmit={handleVerifyOTP}>
+                        <div className='input-group'>
+                            <FaLock className="icon" />
+                            <input
+                                type="text"
+                                value={otp}
+                                placeholder='Enter OTP'
+                                onChange={(e) => setOtp(e.target.value)}
+                            />
+                        </div>
+                        <button type="submit">Submit OTP</button>
+                        {message && <p className="message">{message}</p>}
+                        {error && <p className="error">{error}</p>}
+                    </form>
+                )}
+            </div>
         </div>
     );
 }
 
 export default Login;
-*/

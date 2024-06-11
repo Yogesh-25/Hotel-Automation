@@ -4,13 +4,9 @@
     align-items: center;
     background-color: #f7f4f4;
     color: #030202;
- 
-
-    /* padding: 10px 20px; */
 }
 
 .navbar-left {
-    /* font-size: 24px; */
     font-weight: bold;
 }
 
@@ -40,29 +36,6 @@
     text-align: center;
 }
 
-
-
-/* .signin-button,
-.signout-button {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-} */
-
-/* .signin-button:hover,
-.signout-button:hover {
-    background-color: #7098e9;
-} */
-
-
-/* Navbar.css */
-
-
-
 .signout-button {
     background-color: #007bff;
     color: white;
@@ -91,7 +64,6 @@
     color: rgb(241, 141, 141);
     font-size: 1.5rem;
     border-radius: 50%;
-    /* padding: 10px; */
     transition: background-color 0.3s;
 }
 
@@ -100,13 +72,9 @@
     color: aqua;
 }
 
-
-
-
 .navbar-center {
     flex: 4;
     margin-top: 0.2rem;
-    /* Take up remaining space */
     text-align: center;
 
 }

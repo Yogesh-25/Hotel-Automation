@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../styles/DashboardPage/ReviewCard.css'; // Assuming you use a new CSS file
+import '../../styles/DashboardPage/ReviewCard.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -54,15 +54,7 @@ const ReviewCard = () => {
         <>
             <div className="review-card-row">
                 {reviews
-                    .filter(review => {
-                        if (uniqueProductNames.has(review.product?.productName)) {
-                            return false;
-                        } else {
-                            uniqueProductNames.add(review.product?.productName);
-                            return true;
-                        }
-                    })
-                    .slice(0, 5)
+                    .slice(-5) // Get the last 5 reviews
                     .map((review, index) => (
                         <div key={review._id} className="review-card">
                             {review.product?.image && (
