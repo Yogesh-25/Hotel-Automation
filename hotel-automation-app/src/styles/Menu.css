@@ -1,69 +1,49 @@
 .menu-list-container {
-    /* margin-left: 0.5rem; */
     max-width: 1260px;
-    /* width: 1440px; */
     margin: 0 auto;
+    margin-top: 1rem;
     padding-left: 3px;
-    /* margin-top: 2rem; */
 }
 
 .menu-item-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0 10px; */
-    /* Ensure space between title and badge */
 }
 
 .rating-badge {
     display: inline-flex;
     align-items: center;
     background-color: #28a745;
-    /* Green background */
     color: #fff;
-    /* White text */
     border-radius: 8px;
-    /* Rounded corners */
     padding: 0.1em 0.5em;
-    /* Adjusted padding for reduced height */
     font-size: 0.75em;
-    /* Smaller text */
     margin-left: auto;
-    /* Push the badge to the right */
     width: 40px;
     height: 25px;
-    /* Adjusted minimum width */
     justify-content: center;
 }
 
 .high-rating {
     background-color: #28a745;
-    /* Green for high ratings */
     color: #fff;
-    /* White text */
 }
 
 .medium-rating {
     background-color: #ffc107;
-    /* Yellow for medium ratings */
     color: #000;
-    /* Black text */
 }
 
 .low-rating {
     background-color: #dc3545;
-    /* Red for low ratings */
     color: #fff;
-    /* White text */
 }
 
 .rating-badge .star {
     margin-left: 2px;
-    /* Space between the rating number and the star */
     color: #fff;
-    /* White star */
     font-size: 1em;
-    /* Keep the star size consistent */
 }
 
 .menu-list-heading {
@@ -75,6 +55,7 @@
 .category-name {
     text-align: center;
     padding: 3px;
+    margin-top: 2rem;
     background-color: rgba(238, 231, 186, 0.453);
     border-radius: 10px;
 }
@@ -126,7 +107,6 @@
 .menu-item-title {
     font-size: 20px;
     padding: 0 10px;
-    /* margin-bottom: 10px; */
 }
 
 .prodName {
@@ -145,14 +125,12 @@
     margin-bottom: 5px;
     margin: 10px;
     font-weight: 500;
-    /* margin-right: 10px; */
 }
 
 .menu-item-info span {
     color: green;
     font-size: 24px;
     font-weight: 800;
-    /* margin-left: 10px; */
 }
 
 .cart-controls {
@@ -179,7 +157,6 @@
     border: none;
     padding: 10px 14px;
     cursor: pointer;
-    /* margin-left: 0; */
     margin: 0 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -239,4 +216,43 @@
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+/* Media query for screens up to 576px (Extra small devices) */
+@media screen and (max-width: 576px) {
+    .menu-list-container {
+        max-width: 550px;
+    }
+
+    .category-name {
+        font-size: 20px;
+    }
+}
+
+/* Media query for screens between 576px and 768px (Small devices) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+    .menu-list,
+    .cart-item-ul {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .menu-item-title {
+        font-size: 16px;
+    }
+
+    .menu-item-description {
+        font-size: 14px;
+    }
+
+    .menu-item-info,
+    .cart-controls {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .menu-list-container {
+        margin-left: 1.8rem;
+    }
 }

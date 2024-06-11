@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../styles/UserReview.css'; // Import the CSS file
+import '../styles/UserReview.css'; 
 
 const UserReview = () => {
     const [loading, setLoading] = useState(true);

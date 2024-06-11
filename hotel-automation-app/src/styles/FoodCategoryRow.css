@@ -1,0 +1,46 @@
+.food-category-slider {
+    .slick-slide {
+        outline: none;
+    }
+}
+
+.category-image-container {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.category-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.category-title {
+    font-size: 16px;
+    font-weight: bold;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow-wrapper {
+    display: block;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid rgb(50, 147, 244);
+    transition: background-color 0.3s ease;
+}
+.left{
+    margin-right: 2rem;
+}
+
+.arrow-wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

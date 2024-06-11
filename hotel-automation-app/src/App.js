@@ -40,6 +40,8 @@ import { AuthProvider } from './context/AuthContext';
 import ResetPassword from './Components/ResetPassword';
 import ForgotPassword from './Components/ForgotPassword';
 import QrCodeComponent from './Components/QRCodeComponent';
+import CartItem from './pages/CartItem';
+import Cart from './Components/Cart';
 
 const App = () => {
   return (
@@ -47,10 +49,14 @@ const App = () => {
       <Router>
         <Navigation />
         <Routes>
+          {/* <Route path="/" element={<QrCodeComponent />} /> */}
           <Route path="/" element={<HomePage />} />
+
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          {/* <Route path="/cart" element={<Cart />} /> */}
+
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
         </Routes>

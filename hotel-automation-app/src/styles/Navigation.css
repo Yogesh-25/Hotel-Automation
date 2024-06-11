@@ -1,12 +1,8 @@
-/* Navigation.css */
 .navigation .menu-links .active-link {
     color: #ec2e64;
-    /* Change to your desired color */
-    /* font-weight: bold; */
 }
 
 .navigation {
-    /* margin-top: 10px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,8 +62,6 @@
     transition: color 0.3s ease;
 }
 
-
-
 .navigation h1:hover {
     text-decoration: none;
 }
@@ -107,7 +101,6 @@ li span {
 
 .menu-links {
     position: relative;
-    /* Ensure user info dropdown is positioned relative to the menu */
 }
 
 .user-info-dropdown {
@@ -122,15 +115,11 @@ li span {
     width: 350px;
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
 }
 
 
 .user-info-item {
-    /* display: grid; */
-    /* justify-content: space-between; */
     align-items: center;
-    /* margin-right: 1rem; */
     padding: 5px 10px;
     background-color: #f9f9f9;
     border-radius: 5px;
@@ -139,17 +128,11 @@ li span {
 
 .user-info-item p {
     margin-right: 10px;
-    /* Add space between p and span */
 }
 
 .user-info-item:hover {
-    /* background-color: #f0f0f0; */
     text-decoration: none;
 }
-
-/* .navigation ul li span:hover {
-    color: #ffcc00;
-} */
 
 .navigation ul li button:hover {
     color: rgb(236, 7, 7);
@@ -233,33 +216,21 @@ li span {
 
 }
 
-
-
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-
-    /* Black w/ opacity */
 }
 
 .modal.open {
     display: block;
-    /* Show the modal */
 }
 
 .modal-content-login-review {
@@ -268,7 +239,6 @@ li span {
     margin-right: 16.5rem;
     border: 1px solid #888;
     width: 80%;
-    /* Could be more or less, depending on screen size */
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -298,19 +268,6 @@ li span {
     text-decoration: none;
     cursor: pointer;
 }
-
-
-
-/* .user-info-item {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.user-info-item div {
-    margin-bottom: 5px;
-} */
-
 
 .main-page-review-item {
     margin-left: -2rem;
@@ -386,7 +343,6 @@ li span {
     margin-top: 0.5rem;
 }
 
-.user-info-drop {}
 
 .but-my-review:hover {
     color: #c47a4f;
@@ -397,56 +353,146 @@ li span {
     display: inline-flex;
     align-items: center;
     background-color: #28a745;
-    /* Green background */
     color: #fff;
-    /* White text */
     border-radius: 8px;
-    /* Rounded corners */
     padding: 0.1em 0.5em;
-    /* Adjusted padding for reduced height */
     font-size: 0.7em;
-    /* Smaller text */
     margin-left: auto;
-    /* Push the badge to the right */
     width: 40px;
     height: 25px;
-    /* Adjusted minimum width */
     justify-content: center;
 }
 
 .high-rating {
     background-color: #28a745;
-    /* Green for high ratings */
     color: #fff;
-    /* White text */
 }
 
 .medium-rating {
     background-color: #ffc107;
-    /* Yellow for medium ratings */
     color: #000;
-    /* Black text */
 }
 
 .low-rating {
     background-color: #dc3545;
-    /* Red for low ratings */
     color: #fff;
-    /* White text */
 }
 
 .rating-badge .star {
     margin-left: 2px;
-    /* Space between the rating number and the star */
     color: #fff;
-    /* White star */
     font-size: 1em;
-    /* Keep the star size consistent */
+
 }
 
 
 /* Responsive styles */
-@media screen and (max-width: 768px) {
+
+/* Media query for screens up to 576px (Extra small devices) */
+@media screen and (max-width: 576px) {
+    .navigation {
+        width: 100%;
+    }
+
+    .left-section h1 {
+        font-size: 1rem;
+        margin-left: 0rem;
+    }
+
+    .right-section ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right-section ul.open {
+        display: flex;
+    }
+
+    .right-section li {
+        margin: 10px 0;
+        margin-top: 1.5rem;
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+
+    .right-section li:hover {
+        color: #f38240;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .close-button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Media query for screens between 576px and 768px (Small devices) */
+@media screen and (min-width: 577px) and (max-width: 767px) {
+    .navigation {
+        width: 120%;
+    }
+
+    .left-section h1 {
+        font-size: 1.1rem;
+        margin-left: 0rem;
+    }
+
+    .right-section ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 110%;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right-section ul.open {
+        display: flex;
+    }
+
+    .right-section li {
+        margin: 10px 0;
+        margin-top: 2rem;
+        padding: 10px;
+        font-size: 1.4rem;
+    }
+
+    .right-section li:hover {
+        color: #f38240;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .close-button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 948px) {
+
+
     .left-section h1 {
         font-size: 1.2rem;
         margin-left: 0rem;
@@ -458,7 +504,7 @@ li span {
         position: absolute;
         top: 50px;
         left: 0;
-        width: 100%;
+        width: 80%;
         background-color: #333;
         padding: 10px;
         align-items: center;
@@ -491,6 +537,3 @@ li span {
         right: 10px;
     }
 }
-
-
-/* Navigation.css */

@@ -6,7 +6,6 @@ import backgroundImageUser from '../Images/login4.jpeg';
 
 const SignInModal = ({ isOpen, onClose }) => {
     const [isRegistering, setIsRegistering] = useState(false);
-
     const { signIn } = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -44,7 +43,7 @@ const SignInModal = ({ isOpen, onClose }) => {
                 signIn(response.data.username, email);
                 setMessage('Register successful');
                 onClose();
-                window.location.href = '/'; // Redirect to home page
+                window.location.href = '/';
             } else {
                 setError('');
                 setMessage(`Error registering user: ${response.data.message}`);
@@ -79,7 +78,7 @@ const SignInModal = ({ isOpen, onClose }) => {
     };
 
     const handleLoginAdmin = () => {
-        window.location.href = 'http://localhost:3000/login';
+        window.location.href = 'http://localhost:3000/adminlogin';
     }
 
     const handleForgotPassword = async () => {
@@ -88,8 +87,8 @@ const SignInModal = ({ isOpen, onClose }) => {
             setError('Email is required.');
             return;
         }
-        // setError('');
         try {
+            setError('');
             const response = await axios.post('http://localhost:5000/api/send-otp', {
                 email,
             });
@@ -118,6 +117,7 @@ const SignInModal = ({ isOpen, onClose }) => {
                 setMessage('OTP verified successfully.');
                 setIsOtpVerified(true);
             } else {
+                setMessage('');
                 setError(response.data.message);
             }
         } catch (error) {
@@ -167,7 +167,7 @@ const SignInModal = ({ isOpen, onClose }) => {
     const handleToggleForm = () => {
         setIsRegistering(!isRegistering);
 
-        setIsForgotPassword(false); // Ensure isForgotPassword is reset
+        setIsForgotPassword(false);
     };
 
     return (

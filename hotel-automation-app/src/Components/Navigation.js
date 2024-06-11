@@ -13,12 +13,13 @@ const Navigation = () => {
     const [reviews, setReviews] = useState([]);
     const [isReviewsModalOpen, setReviewsModalOpen] = useState(false);
     const location = useLocation();
+    const [showCart, setShowCart] = useState(false);
+
 
     useEffect(() => {
         if (username) {
             fetchUserReviews(username);
         }
-        // Close menu on route change
         setMenuOpen(false);
     }, [username, location.pathname]);
 
@@ -91,6 +92,13 @@ const Navigation = () => {
         return 'low-rating';
     };
 
+    const scrollToCart = () => {
+        const cartElement = document.getElementById('cart');
+        if (cartElement) {
+            cartElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <nav className="navigation">
@@ -147,6 +155,7 @@ const Navigation = () => {
                                 Contact
                             </NavLink>
                         </li>
+
                         {username ? (
                             <>
                                 <li>
@@ -174,6 +183,18 @@ const Navigation = () => {
                                 <button onClick={openModal}>Sign In</button>
                             </li>
                         )}
+                        <li>
+                            <NavLink
+                                
+                                onClick={() => {
+                                    scrollToCart();
+                                    setShowCart(true); // Ensure cart is shown when scrolling to it
+                                }}
+                                // className={({ isActive }) => (isActive ? 'active-link' : '')}
+                            >
+                                Cart
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </nav>

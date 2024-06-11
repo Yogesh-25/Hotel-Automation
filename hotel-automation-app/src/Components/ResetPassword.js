@@ -1,4 +1,3 @@
-// frontend/src/components/ResetPassword.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -39,5 +38,4 @@ function ResetPassword() {
         </div>
     );
 }
-
 export default ResetPassword;

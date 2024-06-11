@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
-import profile from '../data/yogesh.jpeg';
+import profile from '../Images/yogesh img.jpg';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 

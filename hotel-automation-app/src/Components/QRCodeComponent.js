@@ -1,15 +1,18 @@
-// src/QrCodeComponent.js
-
 import React from 'react';
 import QRCode from 'qrcode.react';
 
-const QrCodeComponent = () => {
+function QRCodeComponent() {
+    // Handle redirection after QR code scanning
+    const handleRedirect = () => {
+        window.location.href = '/home';
+    };
+
     return (
         <div style={styles.container}>
-            <QRCode value="http://10.70.41.203:3001/home" size={256} />
+            <QRCode value="http://google.com" size={256} onClick={handleRedirect} />
         </div>
     );
-};
+}
 
 const styles = {
     container: {
@@ -21,4 +24,4 @@ const styles = {
     },
 };
 
-export default QrCodeComponent;
+export default QRCodeComponent;

@@ -114,14 +114,14 @@ const ContactPage = () => {
                                 <h6 className="info-title">Location</h6>
                                 <p className="info-text">Latur, Maharastra,<br />India, IND 9876543210</p>
                                 <h6 className="info-title">Our Top Services</h6>
-                                <p className="info-text">Local transfers<br />Airport Transfers<br />Excursions and Tours</p>
+                                <p className="info-text">Website Development<br />Java Programming<br /></p>
                             </div>
                         </div>
                         <div className="layout-cell map-cell">
                             <div className="container-layout">
                                 <div className="map">
-
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30271.36221990822!2d76.2873449!3d18.487270000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc57ab15c7a4803%3A0xf01de0604d01f0c9!2sBhise%20Wagholi%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1716048260008!5m2!1sen!2sin"  ></iframe>
+                                    {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30271.36221990822!2d76.2873449!3d18.487270000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc57ab15c7a4803%3A0xf01de0604d01f0c9!2sBhise%20Wagholi%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1716048260008!5m2!1sen!2sin"  ></iframe> */}
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242255.66383433173!2d76.31206811311576!3d18.427193412350285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf8747cbda7f35%3A0x3530d9f6c667de75!2sLatur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1717754103774!5m2!1sen!2sin"></iframe>
                                 </div>
                             </div>
                         </div>

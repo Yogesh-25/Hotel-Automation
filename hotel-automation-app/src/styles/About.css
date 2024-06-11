@@ -70,7 +70,7 @@
 
 .about-us-image img {
     max-width: 100%;
-    height: auto;
+    height: 85%;
     border-radius: 8px;
 }
 
@@ -96,36 +96,29 @@
     color: aqua;
 }
 
-/* Brand colors */
 .social-icon.facebook {
     color: #3b5998;
-    /* Facebook blue */
 }
 
 .social-icon.linkedin {
     color: #0077b5;
-    /* LinkedIn blue */
 }
 
 .social-icon.instagram {
     color: #e4405f;
-    /* Instagram pink */
 }
 
 /* Hover effects */
 .social-icon.facebook:hover {
     color: #2d4373;
-    /* Darker Facebook blue */
 }
 
 .social-icon.linkedin:hover {
     color: #005582;
-    /* Darker LinkedIn blue */
 }
 
 .social-icon.instagram:hover {
     color: #f316ad;
-    /* Darker Instagram pink */
 }
 
 /* Media Queries for Responsiveness */

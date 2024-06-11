@@ -10,7 +10,6 @@ const ReviewModal = ({ isOpen, onClose, onReviewSubmit }) => {
     };
 
     const handleSubmit = () => {
-        // Validation can be added here
         if (rating === 0) {
             alert('Please select a rating.');
             return;
@@ -19,11 +18,8 @@ const ReviewModal = ({ isOpen, onClose, onReviewSubmit }) => {
             alert('Please provide feedback.');
             return;
         }
-
         // Send review data to parent component
         onReviewSubmit({ rating, feedback });
-
-        // Close the modal
         onClose();
     };
 
