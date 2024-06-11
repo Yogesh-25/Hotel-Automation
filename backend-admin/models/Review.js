@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define the schema for the Review
 const reviewSchema = new mongoose.Schema({
     menuItemId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -16,10 +15,6 @@ const reviewSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // email: {
-    //     type: String,
-    //     required: true
-    // },
     rating: {
         type: Number,
         required: true,
@@ -36,7 +31,5 @@ const reviewSchema = new mongoose.Schema({
     }
 });
 
-// Create the Review model from the schema
 const Review = mongoose.model('Review', reviewSchema);
-
 module.exports = Review;
