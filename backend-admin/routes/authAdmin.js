@@ -7,8 +7,8 @@ const Admin = require('../models/Admin');
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'btech20project24@gmail.com',
-        pass: 'okrc aiwc rjfu eyhk',
+        user: '',
+        pass: '',
     }
 });
 
@@ -22,7 +22,7 @@ router.post('/admin/login', async (req, res) => {
         const otp = otpGenerator.generate(6, { upperCase: false, specialChars: false, alphabets: false });
         // Send the OTP via email
         transporter.sendMail({
-            from: 'abcyog1jan@gmail.com',
+            from: admin,
             to: email,
             subject: 'Login OTP',
             text: `Your OTP for login is: ${otp}`
